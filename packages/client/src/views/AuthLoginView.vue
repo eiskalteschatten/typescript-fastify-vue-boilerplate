@@ -18,7 +18,7 @@ async function login() {
 
 <template>
   <AuthLayout>
-    <div class="vstack gap-3 login">
+    <form class="vstack gap-3 login" @submit.prevent>
       <div>
         <h3>Login</h3>
       </div>
@@ -44,7 +44,7 @@ async function login() {
       <div class="text-center">
         <RouterLink :to="{ name: 'Register' }">Register</RouterLink>
       </div>
-    </div>
+    </form>
   </AuthLayout>
 </template>
 

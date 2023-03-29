@@ -22,7 +22,7 @@ async function register() {
 
 <template>
   <AuthLayout>
-    <div class="vstack gap-3 register">
+    <form class="vstack gap-3 register" @submit.prevent>
       <div>
         <h3>Register</h3>
       </div>
@@ -58,7 +58,7 @@ async function register() {
       <div class="text-center">
         <RouterLink :to="{ name: 'Login' }">Login</RouterLink>
       </div>
-    </div>
+    </form>
   </AuthLayout>
 </template>
 
