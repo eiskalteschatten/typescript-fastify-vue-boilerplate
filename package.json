@@ -10,7 +10,7 @@
     "predev": "docker compose up -d && npm run build -w=@tfvb/shared",
     "dev": "concurrently \"npm run dev -w=@tfvb/shared\" \"npm run dev -w=@tfvb/client\" \"npm run dev -w=@tfvb/server\"",
     "prebuild": "rm -rf ./packages/client/build && rm -rf ./packages/server/dist && rm -rf ./packages/shared/dist",
-    "build": "npm run build -ws"
+    "build": "npm run build -w=@tfvb/shared && npm run build -w=@tfvb/client && npm run build -w=@tfvb/server"
   },
   "workspaces": [
     "./packages/*"
