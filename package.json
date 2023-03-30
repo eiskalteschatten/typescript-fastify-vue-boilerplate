@@ -8,7 +8,7 @@
     "lint": "npm run lint -ws",
     "start": "npm --prefix ./packages/server start",
     "predev": "docker compose up -d && npm run build -w=@tfvb/shared",
-    "dev": "concurrently \"npm run dev -w=@tfvb/shared\" \"npm run dev -w=@tfvb/client\" \"npm run dev -w=@tfvb/server\"",
+    "dev": "concurrently \"npm run dev -w=@tfvb/shared\" \"npm run dev -w=@tfvb/server\" \"npm run dev -w=@tfvb/client\"",
     "prebuild": "rm -rf ./packages/client/build && rm -rf ./packages/server/dist && rm -rf ./packages/shared/dist",
     "build": "npm run build -w=@tfvb/shared && npm run build -w=@tfvb/client && npm run build -w=@tfvb/server"
   },
