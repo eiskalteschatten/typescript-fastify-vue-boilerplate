@@ -1,4 +1,4 @@
-import { symlinkSync } from 'fs';
+import fs from 'fs';
 import path from 'path';
 
 import tsconfig from '../tsconfig.json';
@@ -16,7 +16,12 @@ async function setupSymlinks(): Promise<void> {
 
     alias = alias.replace('*', '');
 
-    const fullAlias = path.resolve('./node_modules', alias);
+    const firstPartOfAlias = './node_modules';
+    const fullAlias = path.resolve(firstPartOfAlias, alias);
+
+    if (!fs.existsSync(firstPartOfAlias)) {
+      fs.mkdirSync(firstPartOfAlias);
+    }
 
     for (let source of sources) {
       source = source.replace('*', '');
@@ -29,7 +34,7 @@ async function setupSymlinks(): Promise<void> {
       logger.info('- ' + fullAlias + ' -> ' + sourcePath);
 
       try {
-        symlinkSync(sourcePath, fullAlias);
+        fs.symlinkSync(sourcePath, fullAlias);
       }
       catch (error) {
         logger.error(error);
