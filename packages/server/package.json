@@ -12,8 +12,8 @@
     "lint": "eslint \"./**/*.{tsx,ts,js,json}\"",
     "build": "tsc",
     "dev": "cross-env NODE_ENV=development ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --rs --inspect=0.0.0.0:9229 -- src/index.ts",
-    "prestart": "node ./dist/bootstrap.js",
-    "start": "node ./dist/index.js"
+    "prestart": "node ./dist/src/bootstrap.js",
+    "start": "node ./dist/src/index.js"
   },
   "author": "Alex Seifert",
   "license": "ISC",
