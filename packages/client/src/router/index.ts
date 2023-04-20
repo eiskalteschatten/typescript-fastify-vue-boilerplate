@@ -38,6 +38,9 @@ const router = createRouter({
 export default router;
 
 router.beforeEach((to) => {
+  const uiStore = useUIStore();
+  uiStore.isLoading = true;
+
   const { user, accessToken, refreshToken } = useAccountStore();
   const userIsLoggedin = user && accessToken && refreshToken;
 
@@ -47,9 +50,6 @@ router.beforeEach((to) => {
   else if (userIsLoggedin && (to.name === 'Login' || to.name === 'Register')) {
     return { name: 'Home' };
   }
-
-  const uiStore = useUIStore();
-  uiStore.isLoading = true;
 });
 
 router.afterEach((to) => {
