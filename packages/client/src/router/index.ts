@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import { useAccountStore } from '@/stores/account';
+import { useUIStore } from '@/stores/ui';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -46,9 +47,15 @@ router.beforeEach((to) => {
   else if (userIsLoggedin && (to.name === 'Login' || to.name === 'Register')) {
     return { name: 'Home' };
   }
+
+  const uiStore = useUIStore();
+  uiStore.isLoading = true;
 });
 
 router.afterEach((to) => {
   const defaultTitle = 'Typescript Fastify Vue.js Boilerplate';
   document.title = to.meta.title ? `${to.meta.title} | ${defaultTitle}` : defaultTitle;
+
+  const uiStore = useUIStore();
+  uiStore.isLoading = false;
 });
