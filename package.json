@@ -17,14 +17,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eiskalteschatten/typescript-fastify-react-boilerplate.git"
+    "url": "git+https://github.com/eiskalteschatten/typescript-fastify-vue-boilerplate.git"
   },
   "author": "Alex Seifert",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eiskalteschatten/typescript-fastify-react-boilerplate/issues"
+    "url": "https://github.com/eiskalteschatten/typescript-fastify-vue-boilerplate/issues"
   },
-  "homepage": "https://github.com/eiskalteschatten/typescript-fastify-react-boilerplate#readme",
+  "homepage": "https://github.com/eiskalteschatten/typescript-fastify-vue-boilerplate#readme",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/user-event": "^14.0.0",
