@@ -25,7 +25,6 @@
     "@fastify/static": "^6.5.0",
     "@tfvb/client": "^0.1.0",
     "@tfvb/shared": "^0.1.0",
-    "@types/jsdom": "^21.1.1",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.7",
     "dotenv": "^16.0.0",

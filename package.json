@@ -43,8 +43,6 @@
   "dependencies": {
     "@tfvb/client": "file:packages/client",
     "@tfvb/server": "file:packages/server",
-    "@tfvb/shared": "file:packages/shared",
-    "@types/jsdom": "^21.1.1",
-    "pino-pretty": "^10.0.0"
+    "@tfvb/shared": "file:packages/shared"
   }
 }
